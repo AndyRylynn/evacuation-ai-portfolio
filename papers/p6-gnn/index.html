@@ -13,6 +13,7 @@
     <ul class="nav-links">
       <li><a href="#abstract">Abstract</a></li>
       <li><a href="#videos">Videos</a></li>
+      <li><a href="#figures">Figures</a></li>
       <li><a href="#bibtex">BibTeX</a></li>
     </ul>
   </div>
@@ -40,6 +41,7 @@
     <img src="teaser.png" alt="Spatiotemporal GNN interaction graph">
     <p class="teaser-caption"><strong>Fig. 1.</strong> A spatiotemporal graph neural network abstracts evacuees and the built environment into a unified interaction graph, encoding inter-pedestrian social forces and vertical boundary constraints via dynamic and static adjacency matrices.</p>
   </div>
+
 </div>
 
 <section id="abstract">
@@ -73,31 +75,53 @@
       <div class="card-body">Generalizes to an unseen station with reversed vertical evacuation direction.</div>
     </div>
   </div>
+  <div class="figure">
+    <img src="fig-network.png" alt="Spatiotemporal GNN network architecture">
+    <p class="fig-note">The spatiotemporal GNN encoder-processor-decoder architecture for unified pedestrian-environment interaction modelling.</p>
+  </div>
 </section>
 
 <section id="videos">
   <h2 class="section-title">Demo Videos</h2>
-  <div class="videos-grid">
+
+  <p style="font-size:.9rem;color:#374151;margin-bottom:1.25rem;font-weight:600;">Metro Scene 1</p>
+  <div class="videos-grid" style="margin-bottom:2.5rem">
     <div class="video-card">
-      <div class="video-label"><span class="video-badge">V1</span><span class="video-title-text">GNN Evacuation Rollout</span></div>
-      <video controls preload="metadata" poster="fig-overview.png"><source src="v1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-      <p class="fig-note">Continuous microscopic rollout of pedestrian dynamics predicted by the spatiotemporal GNN.</p>
+      <div class="video-label"><span class="video-badge">V1</span><span class="video-title-text">Microscopic Rollout</span></div>
+      <video controls preload="metadata" poster="poster-v1.jpg"><source src="v1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
     </div>
     <div class="video-card">
       <div class="video-label"><span class="video-badge">V2</span><span class="video-title-text">Density &amp; Flow Evolution</span></div>
-      <video controls preload="metadata" poster="fig1.png"><source src="v2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-      <p class="fig-note">Predicted flow distributions and density evolution across multi-level layouts.</p>
+      <video controls preload="metadata" poster="poster-v2.jpg"><source src="v2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    </div>
+  </div>
+
+  <p style="font-size:.9rem;color:#374151;margin-bottom:1.25rem;font-weight:600;">Metro Scene 2</p>
+  <div class="videos-grid">
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V3</span><span class="video-title-text">Microscopic Rollout</span></div>
+      <video controls preload="metadata" poster="poster-v3.jpg"><source src="v3.mp4" type="video/mp4">Your browser does not support the video tag.</video>
     </div>
     <div class="video-card">
-      <div class="video-label"><span class="video-badge">V3</span><span class="video-title-text">Congestion Mapping</span></div>
-      <video controls preload="metadata" poster="fig2.png"><source src="v3.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-      <p class="fig-note">High-fidelity congestion maps supporting rapid dynamic risk assessment.</p>
+      <div class="video-label"><span class="video-badge">V4</span><span class="video-title-text">Density &amp; Flow Evolution</span></div>
+      <video controls preload="metadata" poster="poster-v4.jpg"><source src="v4.mp4" type="video/mp4">Your browser does not support the video tag.</video>
     </div>
-    <div class="video-card">
-      <div class="video-label"><span class="video-badge">V4</span><span class="video-title-text">Cross-Layout Generalization</span></div>
-      <video controls preload="metadata" poster="fig3.png"><source src="v4.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-      <p class="fig-note">Generalization to a previously unseen station configuration with reversed evacuation direction.</p>
-    </div>
+  </div>
+</section>
+
+<section id="figures">
+  <h2 class="section-title">Figures</h2>
+  <div class="figure">
+    <img src="scene1.png" alt="Metro Scene 1">
+    <p class="fig-note">Metro Scene 1 — multi-level underground station layout used in Video 1 &amp; 2.</p>
+  </div>
+  <div class="figure">
+    <img src="fig-adjacency.png" alt="Connection edges definition and adjacency matrix construction">
+    <p class="fig-note">Connection edges definition and adjacency matrix construction.</p>
+  </div>
+  <div class="figure">
+    <img src="scene2.png" alt="Metro Scene 2">
+    <p class="fig-note">Metro Scene 2 — multi-level underground station layout used in Video 3 &amp; 4.</p>
   </div>
 </section>
 
