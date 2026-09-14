@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Extended Cellular Automaton with ControlNet — Tong Lu</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">&larr; Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#bibtex">BibTeX</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="venue-tag">Journal of Building Engineering 2026</div>
+  <h1 class="paper-title">An Extended Cellular Automaton Model for Crowd Evacuation under Multi-Storey Buildings with ControlNet</h1>
+  <p class="authors">
+    <span class="author">Tong Lu</span>,&nbsp; Rong Deng,&nbsp;
+    <span class="author">Yuxin Zhang</span><sup>*</sup>,&nbsp; Saizhe Ding,&nbsp;
+    <span class="author">Xinyan Huang</span><sup>*</sup>
+  </p>
+  <p class="affiliations">
+    Research Center for Smart Urban Resilience and Firefighting, Department of Building Environment and Energy Engineering — The Hong Kong Polytechnic University
+  </p>
+  <div class="badges">
+    <a class="badge badge-primary" href="https://doi.org/10.1016/J.JOBE.2026.115441" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Paper
+    </a>
+    <a class="badge badge-outline" href="#videos">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Videos
+    </a>
+  </div>
+  <div class="teaser">
+    <img src="teaser.png" alt="ControlNet image-to-simulation for multi-storey evacuation">
+    <p class="teaser-caption"><strong>Fig. 1.</strong> Automated multi-storey evacuation modelling: ControlNet converts floor plans into semantic feature maps that drive a multi-level cellular-automaton simulation with bilateral stairwells.</p>
+  </div>
+</div>
+
+<section id="abstract">
+  <h2 class="section-title">Abstract</h2>
+  <p class="abstract">
+    Vertical evacuation safety in high-rise buildings is a key challenge for urban resilience. This study proposes an <strong>automated evacuation modelling method</strong> for high-rise buildings that combines deep learning with an <strong>extended cellular automaton model</strong>, achieving rapid and reasonable evacuation modelling under customized multi-layer scenarios. A <strong>ControlNet</strong> converts building floor plans into semantic feature maps, and a <strong>multi-level cellular-automaton framework</strong> — including floor layouts and bilateral stairwells — allows customizing the number of floors and visualizing dynamic evacuation between staircases. Compared with validated models and real evacuation-drill data, the method reaches a higher semantic-segmentation accuracy (<strong>IoU = 0.906</strong>) and more accurate evacuation-time prediction (<strong>error &lt; 9%</strong>), enabling "image-to-simulation" generation of high-rise scenarios within minutes while capturing the merging effect.
+  </p>
+  <div class="highlight-box">
+    <h4>Key Contributions</h4>
+    <ul>
+      <li>ControlNet floor-plan segmentation at <strong>IoU = 0.906</strong></li>
+      <li>Multi-level cellular automaton with bilateral stairwells and customizable floors</li>
+      <li>Evacuation-time prediction error <strong>&lt; 9%</strong> vs. validated models and drill data</li>
+      <li>"Image-to-simulation" — high-rise scenarios generated within minutes, capturing merging flow</li>
+    </ul>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🖼️</div>
+      <div class="card-title">Image-to-Simulation</div>
+      <div class="card-body">ControlNet turns raw plans into semantic maps, automating scenario setup from images.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏢</div>
+      <div class="card-title">Multi-Storey CA</div>
+      <div class="card-body">Extended cellular automaton with bilateral stairwells and configurable floor counts.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">📏</div>
+      <div class="card-title">Validated Accuracy</div>
+      <div class="card-body">IoU 0.906 segmentation and &lt;9% time error against validated models and drill data.</div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">Demo Video</h2>
+  <div class="videos-grid">
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V1</span><span class="video-title-text">Multi-Storey Evacuation Simulation</span></div>
+      <video controls preload="metadata" poster="teaser.png"><source src="v1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Dynamic evacuation process between staircases in a customized multi-level cellular-automaton scenario.</p>
+    </div>
+  </div>
+  <div class="figure">
+    <img src="fig1.png" alt="ControlNet semantic segmentation of floor plans">
+    <p class="fig-note">ControlNet-based semantic segmentation converting architectural floor plans into structured feature maps.</p>
+  </div>
+  <div class="figure">
+    <img src="fig3.png" alt="Multi-level cellular automaton framework">
+    <p class="fig-note">Multi-level cellular-automaton framework with floor layouts and bilateral stairwells.</p>
+  </div>
+  <div class="figure">
+    <img src="fig4.png" alt="Evacuation dynamics and validation results">
+    <p class="fig-note">Evacuation dynamics and comparison against validated models and real drill data.</p>
+  </div>
+</section>
+
+<section id="bibtex">
+  <h2 class="section-title">BibTeX</h2>
+  <div style="position:relative">
+    <div class="bibtex-block" id="bib">@article{lu2026controlnet,
+  title     = {An extended cellular automaton model for crowd evacuation under
+               multi-storey building with ControlNet},
+  author    = {Lu, Tong and Deng, Rong and Zhang, Yuxin and Ding, Saizhe and Huang, Xinyan},
+  journal   = {Journal of Building Engineering},
+  volume    = {120},
+  pages     = {115441},
+  year      = {2026},
+  publisher = {Elsevier},
+  doi       = {10.1016/J.JOBE.2026.115441}
+}</div>
+    <button class="copy-btn" onclick="copyBib(this)">Copy</button>
+  </div>
+</section>
+
+<footer>
+  <p><a href="mailto:yx.zhang@polyu.edu.hk">yx.zhang@polyu.edu.hk</a> &nbsp;&middot;&nbsp; <a href="mailto:xy.huang@polyu.edu.hk">xy.huang@polyu.edu.hk</a></p>
+  <p style="margin-top:.5rem"><a href="../../">&larr; Back to portfolio</a></p>
+</footer>
+
+<script>
+function copyBib(btn){
+  navigator.clipboard.writeText(document.getElementById('bib').innerText).then(()=>{
+    btn.textContent='Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},2000)
+  })
+}
+</script>
+</body>
+</html>

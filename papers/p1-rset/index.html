@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Powered Safe Egress Time Assessment — Tong Lu</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">&larr; Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#bibtex">BibTeX</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="venue-tag">Journal of Building Engineering 2025</div>
+  <h1 class="paper-title">AI-Powered Safe Egress Time Assessment for Complex Building Fire Evacuation</h1>
+  <p class="authors">
+    <span class="author">Tong Lu</span>,&nbsp; Yanfu Zeng,&nbsp; Zhe Zheng,&nbsp;
+    <span class="author">Yuxin Zhang</span><sup>*</sup>,&nbsp;
+    <span class="author">Xinyan Huang</span><sup>*</sup>,&nbsp; Xinzheng Lu
+  </p>
+  <p class="affiliations">
+    Department of Building Environment and Energy Engineering, The Hong Kong Polytechnic University<br>
+    Department of Civil Engineering, Tsinghua University
+  </p>
+  <div class="badges">
+    <a class="badge badge-primary" href="https://doi.org/10.1016/j.jobe.2025.113013" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Paper
+    </a>
+    <a class="badge badge-outline" href="#videos">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Videos
+    </a>
+  </div>
+  <div class="teaser">
+    <img src="teaser.png" alt="GAN-based RSET prediction network">
+    <p class="teaser-caption"><strong>Fig. 1.</strong> Generative-adversarial network that maps building floor plan, initial occupant distribution, and exit capacity to spatiotemporal occupant-density fields and required safe egress time (RSET).</p>
+  </div>
+</div>
+
+<section id="abstract">
+  <h2 class="section-title">Abstract</h2>
+  <p class="abstract">
+    With the increasing height and complexity of modern buildings, safe evacuation in fire emergencies becomes more challenging. The required safe egress time (RSET) helps evaluate building fire-safety performance, but its quantification relies on costly computational simulations. This study proposes a <strong>deep-learning method to rapidly quantify RSET</strong> and support fire-evacuation assessment. We first built a database of <strong>1,068 evacuation simulations</strong> in buildings such as stadiums and airport terminals with different occupancy distributions. A model based on <strong>generative adversarial networks (GAN)</strong> is trained on inputs of building floor plan, initial occupant distribution, and exit capacity, with outputs of spatiotemporal occupant-density fields.
+  </p>
+  <div class="highlight-box">
+    <h4>Key Contributions</h4>
+    <ul>
+      <li>GAN surrogate predicts RSET with an overall accuracy of <strong>95%</strong></li>
+      <li>Recognizes indoor spatial features and reproduces the full evacuation process</li>
+      <li>Handles varying occupant densities across multiple regions, connected or not</li>
+      <li>Enables performance-based fire-safety analysis for complex buildings in seconds</li>
+    </ul>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🗄️</div>
+      <div class="card-title">1,068-case Database</div>
+      <div class="card-body">Large-scale simulation dataset across stadiums, terminals, and complex layouts with diverse occupancy.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <div class="card-title">Second-scale Prediction</div>
+      <div class="card-body">Replaces hours-long numerical simulation with an instant deep-learning estimate of density fields and RSET.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎯</div>
+      <div class="card-title">95% Accuracy</div>
+      <div class="card-body">Reproduces spatiotemporal evacuation dynamics consistent with validated simulation tools.</div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">Demo Videos</h2>
+  <div class="videos-grid">
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V1</span><span class="video-title-text">Predicted Evacuation Process</span></div>
+      <video controls preload="metadata" poster="fig1.png"><source src="v1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Spatiotemporal occupant-density evolution predicted by the GAN surrogate model.</p>
+    </div>
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V2</span><span class="video-title-text">Multi-Region Density Dynamics</span></div>
+      <video controls preload="metadata" poster="fig2.png"><source src="v2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Handling varying occupant densities across connected and disconnected regions.</p>
+    </div>
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V3</span><span class="video-title-text">RSET Assessment Case</span></div>
+      <video controls preload="metadata" poster="fig3.png"><source src="v3.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">End-to-end RSET quantification for a complex building layout.</p>
+    </div>
+  </div>
+  <div class="figure">
+    <img src="fig-workflow.png" alt="Data preprocessing and training workflow">
+    <p class="fig-note">Data preprocessing pipeline: floor-plan encoding, occupant distribution, and exit-capacity representation feeding the deep-learning model.</p>
+  </div>
+</section>
+
+<section id="bibtex">
+  <h2 class="section-title">BibTeX</h2>
+  <div style="position:relative">
+    <div class="bibtex-block" id="bib">@article{lu2025rset,
+  title     = {AI-powered safe egress time assessment for complex building fire evacuation},
+  author    = {Lu, Tong and Zeng, Yanfu and Zheng, Zhe and Zhang, Yuxin and Huang, Xinyan and Lu, Xinzheng},
+  journal   = {Journal of Building Engineering},
+  volume    = {110},
+  pages     = {113013},
+  year      = {2025},
+  publisher = {Elsevier},
+  doi       = {10.1016/j.jobe.2025.113013}
+}</div>
+    <button class="copy-btn" onclick="copyBib(this)">Copy</button>
+  </div>
+</section>
+
+<footer>
+  <p><a href="mailto:yx.zhang@polyu.edu.hk">yx.zhang@polyu.edu.hk</a> &nbsp;&middot;&nbsp; <a href="mailto:xy.huang@polyu.edu.hk">xy.huang@polyu.edu.hk</a></p>
+  <p style="margin-top:.5rem"><a href="../../">&larr; Back to portfolio</a></p>
+</footer>
+
+<script>
+function copyBib(btn){
+  navigator.clipboard.writeText(document.getElementById('bib').innerText).then(()=>{
+    btn.textContent='Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},2000)
+  })
+}
+</script>
+</body>
+</html>

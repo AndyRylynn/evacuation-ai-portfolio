@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human-AI Interactive Evacuation Framework (IEPTool) — Tong Lu</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">&larr; Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#bibtex">BibTeX</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="venue-tag">Reliability Engineering &amp; System Safety 2026</div>
+  <h1 class="paper-title">Human-AI Interactive Framework for Smart Evacuation Safety Analysis in Large Infrastructures</h1>
+  <p class="authors">
+    <span class="author">Tong Lu</span>,&nbsp;
+    <span class="author">Yuxin Zhang</span><sup>*</sup>,&nbsp; Weikang Xie,&nbsp;
+    <span class="author">Xinyan Huang</span><sup>*</sup>
+  </p>
+  <p class="affiliations">
+    Research Center for Smart Urban Resilience and Firefighting, Department of Building Environment and Energy Engineering — The Hong Kong Polytechnic University
+  </p>
+  <div class="badges">
+    <a class="badge badge-primary" href="https://doi.org/10.1016/j.ress.2025.111695" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Paper
+    </a>
+    <a class="badge badge-outline" href="#videos">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Videos
+    </a>
+  </div>
+  <div class="teaser">
+    <img src="teaser.png" alt="IEPTool human-AI interactive framework">
+    <p class="teaser-caption"><strong>Fig. 1.</strong> IEPTool — a human-AI interactive framework integrating an LSTM+GAN prediction engine with an LLM for interactive evacuation risk analysis and optimization guidance.</p>
+  </div>
+</div>
+
+<section id="abstract">
+  <h2 class="section-title">Abstract</h2>
+  <p class="abstract">
+    The increasing scale and complexity of large urban infrastructures have led to greater pedestrian concentrations and higher risks of crowd-related incidents in emergencies. This study develops an <strong>Intelligent Evacuation Prediction Tool (IEPTool)</strong> with a human-AI interactive framework for evacuation prediction and safety assessment. The tool is powered by a deep-learning engine trained on a comprehensive evacuation-simulation database of <strong>66 real-life architectural floor plans</strong>, including air terminals, exhibition centers, large stadiums, and stations. By integrating <strong>LSTM networks and GAN</strong>, key metrics — evacuation time, per-exit pedestrian flow rate, and dynamic pedestrian-density distribution — are predicted with <strong>over 90% accuracy</strong>. A <strong>large language model</strong> is then incorporated for interactive risk analysis, enabling intelligent safety assessments and optimization guidance through an integrated GUI.
+  </p>
+  <div class="highlight-box">
+    <h4>Key Contributions</h4>
+    <ul>
+      <li>LSTM+GAN engine trained on 66 real floor plans, <strong>&gt;90% accuracy</strong></li>
+      <li>Predicts evacuation time, per-exit flow rate, and dynamic density fields</li>
+      <li>LLM-powered interactive risk analysis and optimization guidance</li>
+      <li>Unified GUI for fast, reliable safety evaluation of complex layouts</li>
+    </ul>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🏟️</div>
+      <div class="card-title">Real-World Data</div>
+      <div class="card-body">66 real architectural floor plans — terminals, exhibition centers, stadiums, and stations.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🧠</div>
+      <div class="card-title">LSTM + GAN Engine</div>
+      <div class="card-body">Temporal-spatial deep learning predicting time, flow, and density at over 90% accuracy.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">💬</div>
+      <div class="card-title">LLM Risk Analysis</div>
+      <div class="card-body">Interactive, human-in-the-loop assessment and optimization guidance inside one GUI.</div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">Demo Videos</h2>
+  <div class="videos-grid">
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V0</span><span class="video-title-text">IEPTool Overview</span></div>
+      <video controls preload="metadata" poster="fig-gui.png"><source src="v0.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Overview of the IEPTool GUI and the human-AI interactive workflow.</p>
+    </div>
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V1</span><span class="video-title-text">Evacuation Prediction Demo</span></div>
+      <video controls preload="metadata" poster="fig1.png"><source src="v1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Deep-learning prediction of evacuation time, exit flow, and dynamic density distribution.</p>
+    </div>
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V2</span><span class="video-title-text">LLM Interactive Risk Analysis</span></div>
+      <video controls preload="metadata" poster="fig2.png"><source src="v2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">LLM-driven interactive risk analysis and optimization guidance for a large infrastructure.</p>
+    </div>
+  </div>
+</section>
+
+<section id="bibtex">
+  <h2 class="section-title">BibTeX</h2>
+  <div style="position:relative">
+    <div class="bibtex-block" id="bib">@article{lu2026ieptool,
+  title     = {Human-AI Interactive Framework for Smart Evacuation Safety
+               Analysis in Large Infrastructures},
+  author    = {Lu, Tong and Zhang, Yuxin and Xie, Weikang and Huang, Xinyan},
+  journal   = {Reliability Engineering \& System Safety},
+  volume    = {266},
+  pages     = {111695},
+  year      = {2026},
+  publisher = {Elsevier},
+  doi       = {10.1016/j.ress.2025.111695}
+}</div>
+    <button class="copy-btn" onclick="copyBib(this)">Copy</button>
+  </div>
+</section>
+
+<footer>
+  <p><a href="mailto:yx.zhang@polyu.edu.hk">yx.zhang@polyu.edu.hk</a> &nbsp;&middot;&nbsp; <a href="mailto:xy.huang@polyu.edu.hk">xy.huang@polyu.edu.hk</a></p>
+  <p style="margin-top:.5rem"><a href="../../">&larr; Back to portfolio</a></p>
+</footer>
+
+<script>
+function copyBib(btn){
+  navigator.clipboard.writeText(document.getElementById('bib').innerText).then(()=>{
+    btn.textContent='Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},2000)
+  })
+}
+</script>
+</body>
+</html>

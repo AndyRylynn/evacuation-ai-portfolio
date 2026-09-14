@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spatiotemporal GNN for Underground Evacuation — Tong Lu</title>
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">&larr; Portfolio</a>
+    <ul class="nav-links">
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#bibtex">BibTeX</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="venue-tag">Tunnelling and Underground Space Technology 2026 &middot; Under review</div>
+  <h1 class="paper-title">Predicting Underground Pedestrian Evacuation via Spatiotemporal GNN in Multi-Level Transportation Infrastructure</h1>
+  <p class="authors">
+    <span class="author">Tong Lu</span>,&nbsp;
+    <span class="author">Yuxin Zhang</span><sup>*</sup>,&nbsp; Xiqiang Wu,&nbsp; Wen Xiong,&nbsp;
+    <span class="author">Xinyan Huang</span><sup>*</sup>
+  </p>
+  <p class="affiliations">
+    Research Center for Smart Urban Resilience and Firefighting — The Hong Kong Polytechnic University<br>
+    Department of Bridge Engineering, School of Transportation, Southeast University
+  </p>
+  <div class="badges">
+    <a class="badge badge-outline" href="#videos">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+      Videos
+    </a>
+  </div>
+  <div class="teaser">
+    <img src="teaser.png" alt="Spatiotemporal GNN interaction graph">
+    <p class="teaser-caption"><strong>Fig. 1.</strong> A spatiotemporal graph neural network abstracts evacuees and the built environment into a unified interaction graph, encoding inter-pedestrian social forces and vertical boundary constraints via dynamic and static adjacency matrices.</p>
+  </div>
+</div>
+
+<section id="abstract">
+  <h2 class="section-title">Abstract</h2>
+  <p class="abstract">
+    Emergency evacuation in large transit hubs poses critical safety challenges due to complex spatial topologies and nonlinear crowd dynamics. Traditional simulations and deep-learning models face limitations in computational efficiency, spatial representation, and generalization. To address this, the study proposes a <strong>spatiotemporal Graph Neural Network (GNN)</strong> framework that jointly abstracts evacuees and building environments into a <strong>unified interaction graph</strong>, explicitly encoding inter-pedestrian social forces and vertical boundary constraints via <strong>dynamic and static adjacency matrices</strong> under an encoder-processor-decoder architecture. Evaluated on <strong>622 diverse multi-level cases</strong>, it achieves <strong>88% accuracy</strong> and an RMSE of <strong>10.82 s</strong> in macroscopic clearance-time prediction, maintaining high microscopic fidelity during 240-s continuous rollouts with average position deviation limited to <strong>7.1 m</strong>, and demonstrates strong cross-layout generalization to an unseen station with reversed vertical evacuation direction.
+  </p>
+  <div class="highlight-box">
+    <h4>Key Contributions</h4>
+    <ul>
+      <li>Unified interaction graph of evacuees and environment (encoder-processor-decoder)</li>
+      <li>Dynamic + static adjacency matrices encode social forces and vertical constraints</li>
+      <li><strong>88% accuracy</strong>, RMSE <strong>10.82 s</strong> on 622 multi-level cases</li>
+      <li>240-s rollouts with <strong>7.1 m</strong> deviation; generalizes to unseen station layouts</li>
+    </ul>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🕸️</div>
+      <div class="card-title">Unified Graph</div>
+      <div class="card-body">Evacuees and environment in one interaction graph across macro and micro scales.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🚇</div>
+      <div class="card-title">Multi-Level Transit</div>
+      <div class="card-body">622 diverse cases spanning complex underground transportation infrastructures.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔄</div>
+      <div class="card-title">Cross-Layout Generalization</div>
+      <div class="card-body">Generalizes to an unseen station with reversed vertical evacuation direction.</div>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">Demo Videos</h2>
+  <div class="videos-grid">
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V1</span><span class="video-title-text">GNN Evacuation Rollout</span></div>
+      <video controls preload="metadata" poster="fig-overview.png"><source src="v1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Continuous microscopic rollout of pedestrian dynamics predicted by the spatiotemporal GNN.</p>
+    </div>
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V2</span><span class="video-title-text">Density &amp; Flow Evolution</span></div>
+      <video controls preload="metadata" poster="fig1.png"><source src="v2.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Predicted flow distributions and density evolution across multi-level layouts.</p>
+    </div>
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V3</span><span class="video-title-text">Congestion Mapping</span></div>
+      <video controls preload="metadata" poster="fig2.png"><source src="v3.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">High-fidelity congestion maps supporting rapid dynamic risk assessment.</p>
+    </div>
+    <div class="video-card">
+      <div class="video-label"><span class="video-badge">V4</span><span class="video-title-text">Cross-Layout Generalization</span></div>
+      <video controls preload="metadata" poster="fig3.png"><source src="v4.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+      <p class="fig-note">Generalization to a previously unseen station configuration with reversed evacuation direction.</p>
+    </div>
+  </div>
+</section>
+
+<section id="bibtex">
+  <h2 class="section-title">BibTeX</h2>
+  <div style="position:relative">
+    <div class="bibtex-block" id="bib">@article{lu2026gnn,
+  title   = {Predicting underground pedestrian evacuation via spatiotemporal GNN
+             in multi-level transportation infrastructure},
+  author  = {Lu, Tong and Zhang, Yuxin and Wu, Xiqiang and Xiong, Wen and Huang, Xinyan},
+  journal = {Tunnelling and Underground Space Technology},
+  year    = {2026},
+  note    = {Under review}
+}</div>
+    <button class="copy-btn" onclick="copyBib(this)">Copy</button>
+  </div>
+</section>
+
+<footer>
+  <p><a href="mailto:yx.zhang@polyu.edu.hk">yx.zhang@polyu.edu.hk</a> &nbsp;&middot;&nbsp; <a href="mailto:xy.huang@polyu.edu.hk">xy.huang@polyu.edu.hk</a></p>
+  <p style="margin-top:.5rem"><a href="../../">&larr; Back to portfolio</a></p>
+</footer>
+
+<script>
+function copyBib(btn){
+  navigator.clipboard.writeText(document.getElementById('bib').innerText).then(()=>{
+    btn.textContent='Copied!';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('copied')},2000)
+  })
+}
+</script>
+</body>
+</html>

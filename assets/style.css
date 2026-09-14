@@ -1,0 +1,124 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#1e40af;--blue-light:#dbeafe;
+  --text:#111827;--muted:#6b7280;
+  --border:#e5e7eb;--bg:#f9fafb;--max:900px
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:#fff;color:var(--text);line-height:1.6
+}
+nav{
+  position:sticky;top:0;background:rgba(255,255,255,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--border);
+  z-index:100;padding:.75rem 1.5rem
+}
+.nav-inner{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.nav-brand{font-weight:700;font-size:1.1rem;color:var(--blue);text-decoration:none}
+.nav-links{display:flex;gap:1.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.hero{padding:4rem 1.5rem 3rem;text-align:center;max-width:var(--max);margin:0 auto}
+.venue-tag{
+  display:inline-block;background:var(--blue-light);color:var(--blue);
+  font-size:.85rem;font-weight:600;padding:.25rem .75rem;
+  border-radius:999px;margin-bottom:1.5rem
+}
+.paper-title{
+  font-size:clamp(1.4rem,3.2vw,1.9rem);font-weight:800;line-height:1.3;
+  margin-bottom:1.5rem;letter-spacing:-.02em;max-width:780px;margin-left:auto;margin-right:auto
+}
+.hero-lead{font-size:1.05rem;color:#374151;max-width:720px;margin:0 auto 2rem;line-height:1.8}
+.teaser{margin-top:2.5rem;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 24px rgba(0,0,0,.08)}
+.teaser img{width:100%;display:block}
+.teaser-caption{font-size:.82rem;color:var(--muted);padding:.7rem 1.25rem;background:var(--bg);border-top:1px solid var(--border);text-align:center;line-height:1.6}
+.teaser-caption strong{color:var(--text)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.25rem}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1rem 1.1rem}
+.card-icon{font-size:1.4rem;margin-bottom:.5rem}
+.card-title{font-size:.9rem;font-weight:700;margin-bottom:.3rem;color:var(--blue)}
+.card-body{font-size:.85rem;color:#374151;line-height:1.6}
+.authors{font-size:1rem;color:var(--muted);margin-bottom:.5rem}
+.authors .author{color:var(--text);font-weight:500}
+.affiliations{font-size:.875rem;color:var(--muted);margin-bottom:2rem;line-height:1.7}
+.badges{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap}
+.badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.45rem 1rem;border-radius:8px;
+  font-size:.9rem;font-weight:600;text-decoration:none;
+  transition:opacity .2s,transform .15s
+}
+.badge:hover{opacity:.85;transform:translateY(-1px)}
+.badge-primary{background:var(--blue);color:#fff}
+.badge-outline{background:#fff;color:var(--text);border:1.5px solid var(--border)}
+section{padding:3rem 1.5rem;max-width:var(--max);margin:0 auto}
+.section-title{font-size:1.35rem;font-weight:700;margin-bottom:1.25rem;padding-bottom:.5rem;border-bottom:2px solid var(--blue-light)}
+.abstract{font-size:1rem;color:#374151;line-height:1.85;text-align:justify}
+.highlight-box{
+  background:var(--blue-light);border-left:4px solid var(--blue);
+  border-radius:0 8px 8px 0;padding:1rem 1.25rem;margin-top:1.5rem
+}
+.highlight-box h4{font-size:.95rem;font-weight:700;color:var(--blue);margin-bottom:.5rem}
+.highlight-box ul{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.highlight-box li{font-size:.9rem;padding-left:1rem;position:relative}
+.highlight-box li::before{content:"\2192";position:absolute;left:0;color:var(--blue);font-weight:700}
+.videos-grid{display:grid;gap:2.5rem}
+.video-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.video-label{
+  padding:.75rem 1.25rem;background:#fff;
+  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.75rem
+}
+.video-badge{
+  background:var(--blue);color:#fff;font-size:.78rem;
+  font-weight:700;padding:.2rem .55rem;border-radius:5px
+}
+.video-title-text{font-size:.95rem;font-weight:600}
+video{width:100%;display:block;background:#000;max-height:480px}
+.fig-note{font-size:.8rem;color:var(--muted);padding:.6rem 1.25rem;background:#fff;border-top:1px solid var(--border)}
+.figure{margin-top:2.5rem;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.figure img{width:100%;display:block}
+.bibtex-block{
+  background:#1e293b;color:#e2e8f0;border-radius:10px;
+  font-family:'Courier New',monospace;font-size:.82rem;
+  line-height:1.7;padding:1.25rem 1.5rem;overflow-x:auto;position:relative;white-space:pre
+}
+.copy-btn{
+  position:absolute;top:.75rem;right:.75rem;
+  background:#334155;color:#cbd5e1;border:none;
+  border-radius:6px;padding:.3rem .7rem;font-size:.8rem;
+  cursor:pointer;transition:background .2s
+}
+.copy-btn:hover{background:#475569}
+.copy-btn.copied{background:#166534;color:#bbf7d0}
+footer{
+  text-align:center;padding:2.5rem 1rem;
+  font-size:.85rem;color:var(--muted);
+  border-top:1px solid var(--border);margin-top:3rem
+}
+footer a{color:var(--blue);text-decoration:none}
+@media(max-width:600px){
+  .paper-title{font-size:1.5rem}
+  .badges{gap:.5rem}
+  .badge{padding:.35rem .75rem;font-size:.85rem}
+}
+/* ---- portfolio landing grid ---- */
+.paper-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem}
+.paper-card{
+  display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);
+  border-radius:12px;padding:1.5rem;text-decoration:none;color:inherit;
+  transition:transform .15s,box-shadow .2s,border-color .2s
+}
+.paper-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(30,64,175,.12);border-color:var(--blue)}
+.pc-top{display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.pc-num{
+  background:var(--blue);color:#fff;font-weight:700;font-size:.8rem;
+  width:1.9rem;height:1.9rem;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0
+}
+.pc-venue{font-size:.78rem;font-weight:600;color:var(--blue);background:var(--blue-light);padding:.2rem .6rem;border-radius:999px}
+.pc-title{font-size:1.02rem;font-weight:700;line-height:1.4;margin-bottom:.6rem}
+.pc-desc{font-size:.88rem;color:#374151;line-height:1.6;flex:1}
+.pc-cta{margin-top:1rem;font-size:.85rem;font-weight:600;color:var(--blue)}
+.pc-review{border-style:dashed}
+.pc-review:hover{transform:none;box-shadow:none;border-color:var(--muted)}
+.pc-tag-ext{font-size:.72rem;color:var(--muted);font-weight:500}
